@@ -316,8 +316,6 @@ class ParticleFilter(Node):
     def normalise_weights(self):
         """Normalise the weights of the particles in self.particles_"""
 
-        pass
-
         ####################
         ## YOUR CODE HERE ##
         ## Task 2         ##
@@ -327,11 +325,6 @@ class ParticleFilter(Node):
 
         for particle in self.particles_:
             particle.weight /= particles_weights
-
-        #problems to maybe come back to:
-        # - this doesnt check if all weights are 0
-        # - this doesnt check if the sum of weights is 0
-        # - this doesnt check if the sum of weights is 1
 
 
         
@@ -816,7 +809,6 @@ class ParticleFilter(Node):
         ## Task 8         ##
         ####################
 
-        #using the same approach as i did in task 7
 
         for p in self.particles_:
             angle_difference = wrap_angle(p.theta - self.compass_)
